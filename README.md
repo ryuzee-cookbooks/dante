@@ -1,23 +1,16 @@
 dante Cookbook
 ==============
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+Dante is opensource socks proxy and this cookbook provides the functionality to install it.
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
 #### packages
-- `toaster` - dante needs toaster to brown your bagel.
+- `build-essential` - dante is installed from source so that gcc, make and other build tools are required.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
 
-e.g.
 #### dante::default
 <table>
   <tr>
@@ -27,19 +20,23 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['dante']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['dante']['version']</tt></td>
+    <td>String</td>
+    <td>the version you want to install</td>
+    <td><tt>1.4.1</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['dante']['checksum']</tt></td>
+    <td>String</td>
+    <td>expected checksum of download file</td>
+    <td><tt>See attributes/default.rb</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### dante::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `dante` in your node's `run_list`:
 
 ```json
@@ -53,9 +50,7 @@ Just include `dante` in your node's `run_list`:
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
@@ -65,4 +60,6 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+License: MIT License
+
+Authors: Ryutaro YOSHIBA
